@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Recetas de Acabados Textiles</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <img src="img/encabezado.png" class="image" alt="Encabezado">
+    <h1>Recetas de Acabados Textiles</h1>
+  </header>
+  <main>
+    <div class="cajas">
+      <div>
+        <label for="gramaje">Gramaje por unidad de área (g/m<sup>2):</label>
+        <input type="text" id="gramaje" class="caja" placeholder="Ingrese el gramaje del material">
+        <label for="ancho">Ancho (m):</label>
+        <input type="text" id="ancho" class="caja" placeholder="Ingrese el ancho del material">
+        <label for="largo">Largo (m):</label>
+        <input type="text" id="largo" class="caja" placeholder="Ingrese el largo del material">
+        <label for="pickUp">Pick up (%):</label>
+        <input type="text" id="pickUp" class="caja" placeholder="Ingrese el valor del pick up">
+      </div>
+      <div">
+        <label for="peso">Peso calculado (kg):</label>
+        <input type="text" id="peso" class="caja disabled" readonly>
+        <label for="rendimiento">Rendimiento (kg/m):</label>
+        <input type="text" id="rendimiento" class="caja disabled" readonly>
+        <label for="volumenBano">Volumen baño (L):</label>
+        <input type="text" id="volumenBano" class="caja disabled" readonly>
+    </div>
+    </div>
+    <br>
+    <div>
+      <label for="largo">Número de productos a utilizar en la receta:</label>
+      <select id="numeroProductos" class="combo" style="width: 50px;" onchange="crearCamposProductos()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div id="productosReceta">
+      <div id="infoProducto1">
+        <!-- <select id="producto1" class="combo-producto">
+          <option value="productoA">Producto A</option>
+          <option value="productoB">Producto B</option>
+          <option value="productoC">Producto C</option>
+          <option value="productoD">Producto D</option>
+          <option value="productoE">Producto E</option>
+        </select>
+        <label for="concentracionProducto1">Concentración (g/L):</label>
+        <input type="text" id="concentracionProducto1" class="caja" placeholder="Concentración (g/L)">
+        <label for="pesoProducto1">Peso (kg):</label>
+        <input type="text" id="pesoProducto1" class="caja" placeholder="Peso (kg)">
+        <label for="costoProducto1">Costo por peso (USD/kg):</label>
+        <input type="text" id="costoProducto1" class="caja" placeholder="Costo por peso (USD/kg)">
+        <label for="costoTotalProducto1">Costo total (USD):</label>
+        <input type="text" id="costoTotalProducto1" class="caja" placeholder="Costo total (USD)"> -->
+      </div>
+    </div>
+    <div>
+      <label for="costoTotal" style="font-weight: bolder;">Costo total receta (USD):</label>
+      <input type="text" id="costoTotal" class="caja disabled" style="font-weight: bolder;" readonly>
+      <label for="costoTotalPorKilo" style="font-weight: bolder;">Costo/kg (USD/kg):</label>
+      <input type="text" id="costoTotalPorKilo" class="caja disabled" style="font-weight: bolder;" readonly>
+    </div>
+    <div>
+      <button class="btn" type="button" onclick="calcular()">Calcular</button>
+    </div>
+  </main>
+  <footer>
+    <p>Creado por: Bolaños F, Coronel P, Pinango X, Pijal G</p>
+    <p>Derechos reservados. Noviembre de 2023</p>
+  </footer>
+</body>
+
+</html>
