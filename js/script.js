@@ -12,7 +12,12 @@ function calcular() {
     document.getElementById("rendimiento").value = rendimiento.toFixed(2);
     document.getElementById("volumenBano").value = volumenBano.toFixed(2);
 
-    
+
+    var velocidadFoulard = document.getElementById("velocidadFoulard").value;
+
+    var tiempoProduccion = largo / (velocidadFoulard * 60);
+
+    document.getElementById("tiempoProduccion").value = tiempoProduccion.toFixed(2);
     
     const numeroProductos = document.getElementById("numeroProductos").value;
 
@@ -21,7 +26,7 @@ function calcular() {
     for (var i = 1; i <= numeroProductos; i++) {
         var concentracion = document.getElementById("concentracionProducto" + i).value;
 
-        var pesoProducto = volumenBano * concentracion;
+        var pesoProducto = (volumenBano * concentracion) / 1000;
 
         document.getElementById("pesoProducto" + i).value = pesoProducto.toFixed(2);;
 
